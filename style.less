@@ -1,0 +1,56 @@
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+              ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+              ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+              ~"only screen and (min-device-pixel-ratio: 1.5)";
+@mobile:      ~"only screen and (max-width: 529px)";
+@tablet:      ~"only screen and (min-width: 530px) and (max-width: 949px)";
+@desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
+@desktop-xl:  ~"only screen and (min-width: 1129px)";
+
+.headercommon{
+            height:200px;
+        display: inline-block;
+        float: left;
+}
+header{
+    
+    .logo{
+        background-color: green;
+        width:20%;
+        .headercommon;
+        @media @mobile{
+            width:100%;
+        } 
+        @media @tablet{
+            width:50%;
+        }
+
+
+    }
+    .sidenav{
+        background-color: red;
+        width:80%;
+        .headercommon;
+                @media @mobile{
+            width:100%
+        }
+        @media @tablet{
+            width:50%;
+        } 
+
+    }
+}
+content{
+    #left-content{
+        .headercommon;
+        height:200px;
+        background-color: aqua;
+        width:50%;
+    }
+    #right-content{
+        .headercommon;
+        height:200px;
+        width:50%;
+        background-color: lightcoral;
+    }
+}
